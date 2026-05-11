@@ -36,6 +36,21 @@ $(BINDIR)/$(BINNAME).sh:
 	bash build.sh runscript
 
 # ------------------------------------------------------------------------------
+# GitHub Actions targets
+
+.PHONY: github-build
+github-build: clean build dist
+
+.PHONY: dist
+dist: build
+	@echo "Creating distribution archive..."
+	@bash build.sh dist
+
+.PHONY: clean-all
+clean-all: clean
+	@if [ ! -z "$(DISTDIR)" ]; then rm -rf ./$(DISTDIR); fi
+
+# ------------------------------------------------------------------------------
 # clean
 
 .PHONY: clean
