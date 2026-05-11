@@ -1,0 +1,6 @@
+.git
+.*ignore
+Dockerfile*
+Makefile*
+barista
+bin/

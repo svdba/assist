@@ -1,0 +1,12 @@
+# binary data
+_dist/**
+bin/**
+data/**
+
+# tmp/work files
+*.patch
+*.diff
+*.tmp
+*.bak
+*.orig
+*.rej
